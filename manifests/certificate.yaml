@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: naro-vorn9061-gitlab-spring-api-new-certificate
+  namespace: naro-vorn9061-gitlab-spring-api-new
+spec:
+  secretName: naro-vorn9061-gitlab-spring-api-new-secret-tls
+  commonName: naro-vorn9061-gitlab-spring-api-new.assessify.org
+  dnsNames:
+  - naro-vorn9061-gitlab-spring-api-new.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
